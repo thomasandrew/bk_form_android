@@ -4,7 +4,9 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Dao {
@@ -12,6 +14,7 @@ public class Dao {
     private Cursor cursor;
     private SQLiteDatabase db;
     private ConfigDB data;
+    private Bean bean;
 
     public Dao(Context context) {
         this.context = context;
@@ -38,5 +41,40 @@ public class Dao {
         } finally {
             db.close();
         }
+    }
+
+    public List<Bean> load() {
+        db = data.getReadableDatabase();
+        List<Bean> list = new ArrayList<>();
+        try {
+            cursor = db.rawQuery("SELECT * FROM " + Bean.FORM, null);
+            if (cursor.getCount() > 0) {
+                cursor.moveToFirst();
+                do {
+                    //bean = new Bean();
+                    int id = Integer.parseInt(cursor.getString(0));
+                    String name = cursor.getString(1);
+                    String last_name = cursor.getString(2);
+                    String email = cursor.getString(3);
+                    String password = cursor.getString(4);
+                    int cpf = Integer.parseInt(cursor.getString(5));
+                    int cnpj = Integer.parseInt(cursor.getString(6));
+                    String address = cursor.getString(7);
+
+                    list.add(new Bean(id, name, last_name, email, password, cpf, cnpj, address));
+                } while (cursor.moveToNext());
+            } else {
+                Toast.makeText(context, "Error oh no", Toast.LENGTH_SHORT).show();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        if (cursor != null) {
+            cursor.close();
+        }
+
+        db.close();
+        return list;
     }
 }
