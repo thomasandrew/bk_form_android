@@ -10,6 +10,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText nameEDT, last_nameEDT, emailEDT, passwordEDT, cpfEDT, cnpjEDT, addressEDT;
@@ -17,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     private Dao dao;
     private Bean bean;
     private Intent intent;
+    private Pattern pattern;
+    private Matcher matcher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +43,14 @@ public class MainActivity extends AppCompatActivity {
 
                 if (name.isEmpty() || last_name.isEmpty() || email.isEmpty() || password.isEmpty() || cpf.isEmpty() || cnpj.isEmpty() || address.isEmpty()) {
                     Toast.makeText(MainActivity.this, "Bad", Toast.LENGTH_SHORT).show();
+                } else if (!validateEmail(email)) {
+                    emailEDT.setError(getString(R.string.invalid));
+                    emailEDT.requestFocus();
+                } else if (!validatePassword(password)) {
+                    passwordEDT.setError(getString(R.string.invalidTwo));
+                    passwordEDT.requestFocus();
                 } else {
+                    Toast.makeText(MainActivity.this, "Input Validation Success", Toast.LENGTH_SHORT).show();
                     dao = new Dao(MainActivity.this);
                     bean = new Bean(name, last_name, email, password, Integer.parseInt(cpf), Integer.parseInt(cnpj), address);
                     dao.insertData(bean);
@@ -59,6 +71,28 @@ public class MainActivity extends AppCompatActivity {
         cnpjEDT = findViewById(R.id.CNPJEDT);
         addressEDT = findViewById(R.id.addressEDT);
         btn = findViewById(R.id.goBtn);
+    }
+
+    public boolean validateEmail(String email) {
+        String emailPattern = "^(([\\w-]+\\.)+[\\w-]+|([a-zA-Z]{1}|[\\w-]{2,}))@"
+                + "((([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\.([0-1]?"
+                + "[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\."
+                + "([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\.([0-1]?"
+                + "[0-9]{1,2}|25[0-5]|2[0-4][0-9])){1}|"
+                + "([a-zA-Z]+[\\w-]+\\.)+[a-zA-Z]{2,4})$";
+
+        pattern = Pattern.compile(emailPattern);
+        matcher = pattern.matcher(email);
+
+        return matcher.matches();
+    }
+
+    public boolean validatePassword(String password) {
+        if (password != null && password.length() > 9) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public void nextActivity() {

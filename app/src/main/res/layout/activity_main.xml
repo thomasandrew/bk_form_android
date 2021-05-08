@@ -26,7 +26,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:text="FORM"
+                    android:text="@string/form"
                     android:textColor="@color/white"
                     android:textSize="40sp" />
 
@@ -42,7 +42,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:text="Name"
+                    android:text="@string/name"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
@@ -70,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:text="Last name"
+                    android:text="@string/last_name"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
@@ -98,7 +98,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:text="Email"
+                    android:text="@string/email"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
@@ -127,7 +127,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:text="Password"
+                    android:text="@string/password"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
@@ -156,7 +156,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:text="CPF"
+                    android:text="@string/cpf"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
@@ -184,7 +184,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:text="CNPJ"
+                    android:text="@string/cnpj"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
@@ -212,7 +212,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:text="Address"
+                    android:text="@string/address"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
@@ -238,7 +238,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="25dp"
                 android:background="@drawable/round_btn"
-                android:text="Press"
+                android:text="@string/press"
                 android:textColor="@color/white"
                 android:textSize="30sp" />
 

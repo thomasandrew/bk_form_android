@@ -77,4 +77,15 @@ public class Dao {
         db.close();
         return list;
     }
+
+    public void del(int id) {
+        db = data.getWritableDatabase();
+        try {
+            db.execSQL("DELETE FROM " + Bean.FORM + " WHERE ID = " + id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            db.close();
+        }
+    }
 }

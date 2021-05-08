@@ -53,7 +53,9 @@ public class C_adapter extends RecyclerView.Adapter<C_adapter.ViewHolder> {
         holder.go_delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "Delete", Toast.LENGTH_SHORT).show();
+                dao.del(bean.getId());
+                list.remove(position);
+                notifyDataSetChanged();
             }
         });
 
