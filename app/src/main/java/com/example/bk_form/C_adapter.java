@@ -41,13 +41,12 @@ public class C_adapter extends RecyclerView.Adapter<C_adapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final Bean bean = list.get(position);
 
-        //holder.f_id_resp.setText(Integer.toString(bean.getId()));
         holder.f_name_resp.setText(bean.getName());
         holder.l_name_resp.setText(bean.getLast_name());
         holder.e_email_resp.setText(bean.getEmail());
         holder.p_password_resp.setText(bean.getPassword());
-        holder.c_cpf_resp.setText(Integer.toString(bean.getCpf()));
-        holder.cn_cnpj_resp.setText(Integer.toString(bean.getCnpj()));
+        holder.c_cpf_resp.setText(bean.getCpf());
+        holder.cn_cnpj_resp.setText(bean.getCnpj());
         holder.a_address_resp.setText(bean.getAddress());
 
         holder.go_delete.setOnClickListener(new View.OnClickListener() {
@@ -56,13 +55,6 @@ public class C_adapter extends RecyclerView.Adapter<C_adapter.ViewHolder> {
                 dao.del(bean.getId());
                 list.remove(position);
                 notifyDataSetChanged();
-            }
-        });
-
-        holder.go_update.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, "Update", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -75,12 +67,11 @@ public class C_adapter extends RecyclerView.Adapter<C_adapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView f_name_resp, l_name_resp, e_email_resp, p_password_resp, c_cpf_resp, cn_cnpj_resp, a_address_resp, f_id_resp;
-        private Button go_delete, go_update;
+        private Button go_delete;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            //f_id_resp = itemView.findViewById(R.id.f_i_id);
             f_name_resp = itemView.findViewById(R.id.f_name_resp);
             l_name_resp = itemView.findViewById(R.id.l_name_resp);
             e_email_resp = itemView.findViewById(R.id.e_email_resp);
@@ -89,7 +80,6 @@ public class C_adapter extends RecyclerView.Adapter<C_adapter.ViewHolder> {
             cn_cnpj_resp = itemView.findViewById(R.id.cn_cnpj_resp);
             a_address_resp = itemView.findViewById(R.id.a_address_resp);
             go_delete = itemView.findViewById(R.id.go_delete);
-            go_update = itemView.findViewById(R.id.go_update);
         }
     }
 }

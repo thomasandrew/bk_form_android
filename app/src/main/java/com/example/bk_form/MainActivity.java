@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(MainActivity.this, "Input Validation Success", Toast.LENGTH_SHORT).show();
                     dao = new Dao(MainActivity.this);
-                    bean = new Bean(name, last_name, email, password, Integer.parseInt(cpf), Integer.parseInt(cnpj), address);
+                    bean = new Bean(name, last_name, email, password, cpf, cnpj, address);
                     dao.insertData(bean);
                     Toast.makeText(MainActivity.this, "Sucessfully", Toast.LENGTH_SHORT).show();
                     finish();

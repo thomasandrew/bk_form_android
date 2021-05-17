@@ -45,7 +45,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:text="fist name"
+                        android:text="@string/fist_name_show"
                         android:textColor="@color/black"
                         android:textSize="22sp"
                         android:visibility="gone"/>
@@ -61,7 +61,7 @@
                         android:id="@+id/f_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Fist name: "
+                        android:text="@string/fist_name_show_txt"
                         android:textColor="@color/black"
                         android:textSize="22sp" />
 
@@ -70,7 +70,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:text="fist name"
+                        android:text="@string/fist_name_show_resp"
                         android:textColor="@color/black"
                         android:textSize="22sp" />
                 </LinearLayout>
@@ -86,7 +86,7 @@
                         android:id="@+id/l_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Last name: "
+                        android:text="@string/last_name_show_txt"
                         android:textColor="@color/black"
                         android:textSize="22sp" />
 
@@ -95,7 +95,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:text="last name"
+                        android:text="@string/last_name_show_resp"
                         android:textColor="@color/black"
                         android:textSize="22sp" />
                 </LinearLayout>
@@ -111,7 +111,7 @@
                         android:id="@+id/e_email"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Email: "
+                        android:text="@string/email_show_txt"
                         android:textColor="@color/black"
                         android:textSize="22sp" />
 
@@ -120,7 +120,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:text="email"
+                        android:text="@string/email_show_resp"
                         android:textColor="@color/black"
                         android:textSize="22sp" />
                 </LinearLayout>
@@ -136,7 +136,7 @@
                         android:id="@+id/p_password"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Password: "
+                        android:text="@string/password_show_txt"
                         android:textColor="@color/black"
                         android:textSize="22sp" />
 
@@ -145,7 +145,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:text="password"
+                        android:text="@string/password_show_resp"
                         android:inputType="textPassword"
                         android:textColor="@color/black"
                         android:textSize="22sp" />
@@ -162,7 +162,7 @@
                         android:id="@+id/c_cpf"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CPF: "
+                        android:text="@string/cpf_show_txt"
                         android:textColor="@color/black"
                         android:textSize="22sp" />
 
@@ -171,7 +171,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:text="cpf"
+                        android:text="@string/cpf_show_resp"
                         android:textColor="@color/black"
                         android:textSize="22sp" />
                 </LinearLayout>
@@ -187,7 +187,7 @@
                         android:id="@+id/cn_cnpj"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CNPJ: "
+                        android:text="@string/cnpj_show_txt"
                         android:textColor="@color/black"
                         android:textSize="22sp" />
 
@@ -196,7 +196,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:text="cnpj"
+                        android:text="@string/cnpj__show_resp"
                         android:textColor="@color/black"
                         android:textSize="22sp" />
                 </LinearLayout>
@@ -212,7 +212,7 @@
                         android:id="@+id/a_address"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Address: "
+                        android:text="@string/address_show_txt"
                         android:textColor="@color/black"
                         android:textSize="22sp" />
 
@@ -221,7 +221,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:text="address"
+                        android:text="@string/address_show_resp"
                         android:textColor="@color/black"
                         android:textSize="22sp" />
                 </LinearLayout>
@@ -243,24 +243,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="15dp"
                 android:layout_weight="1"
-                android:background="@color/red"
-                android:text="Delete"
+                android:background="@drawable/round_btn_del"
+                android:text="@string/delete_show"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
-            <Button
-                android:id="@+id/go_update"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="15dp"
-                android:layout_weight="1"
-                android:background="@color/green"
-                android:text="Update"
-                android:textColor="@color/white"
-                android:textSize="25sp" />
         </LinearLayout>
 
     </RelativeLayout>

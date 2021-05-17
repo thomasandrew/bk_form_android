@@ -16,11 +16,11 @@ public class Bean {
     private String last_name;
     private String email;
     private String password;
-    private Integer cpf;
-    private Integer cnpj;
+    private String cpf;
+    private String cnpj;
     private String address;
 
-    public Bean(String name, String last_name, String email, String password, Integer cpf, Integer cnpj, String address) {
+    public Bean(String name, String last_name, String email, String password, String cpf, String cnpj, String address) {
         this.name = name;
         this.last_name = last_name;
         this.email = email;
@@ -30,7 +30,7 @@ public class Bean {
         this.address = address;
     }
 
-    public Bean(Integer id, String name, String last_name, String email, String password, Integer cpf, Integer cnpj, String address) {
+    public Bean(Integer id, String name, String last_name, String email, String password, String cpf, String cnpj, String address) {
         this.id = id;
         this.name = name;
         this.last_name = last_name;
@@ -81,19 +81,19 @@ public class Bean {
         this.password = password;
     }
 
-    public Integer getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(Integer cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
-    public Integer getCnpj() {
+    public String getCnpj() {
         return cnpj;
     }
 
-    public void setCnpj(Integer cnpj) {
+    public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
     }
 

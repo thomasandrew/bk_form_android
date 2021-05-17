@@ -51,20 +51,19 @@ public class Dao {
             if (cursor.getCount() > 0) {
                 cursor.moveToFirst();
                 do {
-                    //bean = new Bean();
                     int id = Integer.parseInt(cursor.getString(0));
                     String name = cursor.getString(1);
                     String last_name = cursor.getString(2);
                     String email = cursor.getString(3);
                     String password = cursor.getString(4);
-                    int cpf = Integer.parseInt(cursor.getString(5));
-                    int cnpj = Integer.parseInt(cursor.getString(6));
+                    String cpf = cursor.getString(5);
+                    String cnpj = cursor.getString(6);
                     String address = cursor.getString(7);
 
                     list.add(new Bean(id, name, last_name, email, password, cpf, cnpj, address));
                 } while (cursor.moveToNext());
             } else {
-                Toast.makeText(context, "Error oh no", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show();
             }
         } catch (Exception e) {
             e.printStackTrace();

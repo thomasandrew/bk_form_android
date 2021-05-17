@@ -12,4 +12,20 @@
     <string name="cnpj">CNPJ</string>
     <string name="address">Address</string>
     <string name="press">Press</string>
+    <string name="cnpj__show_resp">cnpj</string>
+    <string name="fist_name_show">fist name</string>
+    <string name="fist_name_show_txt">Fist name:</string>
+    <string name="fist_name_show_resp">fist name</string>
+    <string name="last_name_show_txt">Last name:</string>
+    <string name="last_name_show_resp">last name</string>
+    <string name="email_show_txt">Email:</string>
+    <string name="email_show_resp">email</string>
+    <string name="password_show_txt">Password:</string>
+    <string name="password_show_resp">password</string>
+    <string name="cpf_show_txt">CPF:</string>
+    <string name="cpf_show_resp">cpf</string>
+    <string name="cnpj_show_txt">CNPJ:</string>
+    <string name="address_show_txt">Address:</string>
+    <string name="address_show_resp">address</string>
+    <string name="delete_show">Delete</string>
 </resources>
